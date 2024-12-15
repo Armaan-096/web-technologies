@@ -1,0 +1,26 @@
+students {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+student {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+name {
+    font-weight: bold;
+    color: #2a9d8f;
+}
+
+age {
+    color: #e76f51;
+}
+
+course {
+    font-style: italic;
+    color: #264653;
+}

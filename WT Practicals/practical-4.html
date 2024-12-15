@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: darkgreen;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        area {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Image Map Example</h1>
+    <p>Click on different regions of the map to explore more about them.</p>
+    <p>Click able points are :</p>
+    <ul>
+        <li style="color: red;">North America</li>
+        <li style="color: red;">South America</li>
+        <li style="color: red;">Africa</li>
+    </ul>
+    
+    <!-- Image with an image map -->
+    <img src="https://gisgeography.com/wp-content/uploads/2022/04/High-Resolution-World-Map.jpg" 
+         alt="World Map" 
+         usemap="#worldmap">
+
+    <!-- Define the image map -->
+    <map name="worldmap">
+        <!-- Define clickable areas with coordinates -->
+        <!-- North America -->
+        <area shape="rect" 
+              coords="50,80,200,200" 
+              href="https://en.wikipedia.org/wiki/North_America" 
+              alt="North America" 
+              target="_blank">
+        
+        <!-- South America -->
+        <area shape="circle" 
+              coords="400,500,80" 
+              href="https://en.wikipedia.org/wiki/South_America" 
+              alt="South America" 
+              target="_blank">
+        
+        <!-- Africa -->
+        <area shape="poly" 
+              coords="650,400,750,450,700,550,600,450" 
+              href="https://en.wikipedia.org/wiki/Africa" 
+              alt="Africa" 
+              target="_blank">
+    </map>
+
+    <p><strong>Note:</strong> The clickable regions are approximate. Feel free to explore!</p>
+</body>
+</html>

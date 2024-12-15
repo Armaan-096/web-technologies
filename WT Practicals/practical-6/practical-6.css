@@ -1,0 +1,38 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Image container using Flexbox to display images in a row */
+.image-container {
+    display: flex;
+    justify-content: center;  /* Center the images */
+    gap: 20px;                /* Add space between images */
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 150px; /* Size of each image */
+    height: 150px; /* Fixed height for images */
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

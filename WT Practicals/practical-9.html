@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events on Image and Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        h1 {
+            color: #333;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="text" onmouseover="onTextMouseOver()" onmouseout="onTextMouseOut()" onclick="onTextClick()">Hover over this text</h1>
+
+    <img id="img" src="https://picsum.photos/200" alt="Sample Image" onmouseover="onImageMouseOver()" onmouseout="onImageMouseOut()" onclick="onImageClick()" />
+
+    <div id="message"></div>
+
+    <script>
+        // Function to change the text color when mouse is over the heading
+        function onTextMouseOver() {
+            document.getElementById("message").innerText = "You hovered over the text!";
+        }
+
+        // Function to reset the text color when mouse leaves the heading
+        function onTextMouseOut() {
+            document.getElementById("message").innerText = "";
+        }
+
+        // Function to change the image size when mouse is over the image
+        function onImageMouseOver() {
+            document.getElementById("img").style.transform = "scale(1.1)";
+        }
+
+        // Function to reset the image size when mouse leaves the image
+        function onImageMouseOut() {
+            document.getElementById("img").style.transform = "scale(1)";
+        }
+
+        // Function to display a message when the image is clicked
+        function onImageClick() {
+            alert("Image clicked! This could trigger any action.");
+        }
+
+        // Function to display a message when the text is clicked
+        function onTextClick() {
+            alert("Text clicked! You can trigger different actions here.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "students.dtd">
+<students>
+    <student>
+        <name>John Doe</name>
+        <age>20</age>
+        <course>Computer Science</course>
+    </student>
+    <student>
+        <name>Jane Smith</name>
+        <age>22</age>
+        <course>Mathematics</course>
+    </student>
+</students>

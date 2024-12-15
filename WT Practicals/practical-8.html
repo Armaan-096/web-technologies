@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum and Average Calculator</title>
+</head>
+<body>
+
+    <h1>Sum and Average Calculator</h1>
+    <button onclick="calculateSumAndAverage()">Calculate Sum and Average</button>
+
+    <script>
+        function calculateSumAndAverage() {
+            // Prompt the user to enter five numbers
+            let num1 = parseFloat(prompt("Enter number 1:"));
+            let num2 = parseFloat(prompt("Enter number 2:"));
+            let num3 = parseFloat(prompt("Enter number 3:"));
+            let num4 = parseFloat(prompt("Enter number 4:"));
+            let num5 = parseFloat(prompt("Enter number 5:"));
+
+            // Check if all inputs are valid numbers
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4) || isNaN(num5)) {
+                alert("Please enter valid numbers for all inputs.");
+                return;
+            }
+
+            // Calculate sum and average
+            let sum = num1 + num2 + num3 + num4 + num5;
+            let average = sum / 5;
+
+            // Display the results
+            alert("The sum of the numbers is: " + sum + "\nThe average of the numbers is: " + average);
+        }
+    </script>
+</body>
+</html>

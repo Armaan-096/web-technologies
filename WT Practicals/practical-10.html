@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dialog Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Dialog Boxes Example</h1>
+
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+
+    <div id="message"></div>
+
+    <script>
+        // Function to display an alert box
+        function showAlert() {
+            alert("This is an alert box!");
+        }
+
+        // Function to display a confirm box
+        function showConfirm() {
+            let userResponse = confirm("Do you want to proceed?");
+            if (userResponse) {
+                document.getElementById("message").innerText = "You clicked OK!";
+            } else {
+                document.getElementById("message").innerText = "You clicked Cancel!";
+            }
+        }
+
+        // Function to display a prompt box
+        function showPrompt() {
+            let userName = prompt("Please enter your name:", "John Doe");
+            if (userName != null && userName != "") {
+                document.getElementById("message").innerText = "Hello, " + userName + "!";
+            } else {
+                document.getElementById("message").innerText = "You didn't enter a name.";
+            }
+        }
+    </script>
+</body>
+</html>
